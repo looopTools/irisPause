@@ -19,20 +19,28 @@
 
 import Cocoa
 
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
     
+    var preference:CCNPreferencesWindowController!
+    
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
+
+        // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
         icon?.template = true
-        
         statusItem.image = icon
         statusItem.menu = statusMenu
+        
+        // Setup preference
+        preference = CCNPreferencesWindowController()
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
