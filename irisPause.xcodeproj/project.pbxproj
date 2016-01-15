@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E8775C51C4948B80081CFDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775C41C4948B80081CFDB /* AppDelegate.swift */; };
+		4E8775C71C4948B80081CFDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E8775C61C4948B80081CFDB /* Assets.xcassets */; };
+		4E8775CA1C4948B80081CFDB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8775C81C4948B80081CFDB /* MainMenu.xib */; };
+		4E8775D51C4948B80081CFDB /* irisPauseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775D41C4948B80081CFDB /* irisPauseTests.swift */; };
+		4E8775E01C4948B90081CFDB /* irisPauseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4E8775D11C4948B80081CFDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E8775B91C4948B80081CFDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E8775C01C4948B80081CFDB;
+			remoteInfo = irisPause;
+		};
+		4E8775DC1C4948B80081CFDB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E8775B91C4948B80081CFDB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E8775C01C4948B80081CFDB;
+			remoteInfo = irisPause;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E8775C11C4948B80081CFDB /* irisPause.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = irisPause.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8775C41C4948B80081CFDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E8775C61C4948B80081CFDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E8775C91C4948B80081CFDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		4E8775CB1C4948B80081CFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8775D01C4948B80081CFDB /* irisPauseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = irisPauseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8775D41C4948B80081CFDB /* irisPauseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = irisPauseTests.swift; sourceTree = "<group>"; };
+		4E8775D61C4948B80081CFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E8775DB1C4948B80081CFDB /* irisPauseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = irisPauseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = irisPauseUITests.swift; sourceTree = "<group>"; };
+		4E8775E11C4948B90081CFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E8775BE1C4948B80081CFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775CD1C4948B80081CFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775D81C4948B80081CFDB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E8775B81C4948B80081CFDB = {
+			isa = PBXGroup;
+			children = (
+				4E8775C31C4948B80081CFDB /* irisPause */,
+				4E8775D31C4948B80081CFDB /* irisPauseTests */,
+				4E8775DE1C4948B90081CFDB /* irisPauseUITests */,
+				4E8775C21C4948B80081CFDB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4E8775C21C4948B80081CFDB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E8775C11C4948B80081CFDB /* irisPause.app */,
+				4E8775D01C4948B80081CFDB /* irisPauseTests.xctest */,
+				4E8775DB1C4948B80081CFDB /* irisPauseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E8775C31C4948B80081CFDB /* irisPause */ = {
+			isa = PBXGroup;
+			children = (
+				4E8775C41C4948B80081CFDB /* AppDelegate.swift */,
+				4E8775C61C4948B80081CFDB /* Assets.xcassets */,
+				4E8775C81C4948B80081CFDB /* MainMenu.xib */,
+				4E8775CB1C4948B80081CFDB /* Info.plist */,
+			);
+			path = irisPause;
+			sourceTree = "<group>";
+		};
+		4E8775D31C4948B80081CFDB /* irisPauseTests */ = {
+			isa = PBXGroup;
+			children = (
+				4E8775D41C4948B80081CFDB /* irisPauseTests.swift */,
+				4E8775D61C4948B80081CFDB /* Info.plist */,
+			);
+			path = irisPauseTests;
+			sourceTree = "<group>";
+		};
+		4E8775DE1C4948B90081CFDB /* irisPauseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */,
+				4E8775E11C4948B90081CFDB /* Info.plist */,
+			);
+			path = irisPauseUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E8775C01C4948B80081CFDB /* irisPause */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E8775E41C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPause" */;
+			buildPhases = (
+				4E8775BD1C4948B80081CFDB /* Sources */,
+				4E8775BE1C4948B80081CFDB /* Frameworks */,
+				4E8775BF1C4948B80081CFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = irisPause;
+			productName = irisPause;
+			productReference = 4E8775C11C4948B80081CFDB /* irisPause.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4E8775CF1C4948B80081CFDB /* irisPauseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E8775E71C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseTests" */;
+			buildPhases = (
+				4E8775CC1C4948B80081CFDB /* Sources */,
+				4E8775CD1C4948B80081CFDB /* Frameworks */,
+				4E8775CE1C4948B80081CFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E8775D21C4948B80081CFDB /* PBXTargetDependency */,
+			);
+			name = irisPauseTests;
+			productName = irisPauseTests;
+			productReference = 4E8775D01C4948B80081CFDB /* irisPauseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4E8775DA1C4948B80081CFDB /* irisPauseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E8775EA1C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseUITests" */;
+			buildPhases = (
+				4E8775D71C4948B80081CFDB /* Sources */,
+				4E8775D81C4948B80081CFDB /* Frameworks */,
+				4E8775D91C4948B80081CFDB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4E8775DD1C4948B80081CFDB /* PBXTargetDependency */,
+			);
+			name = irisPauseUITests;
+			productName = irisPauseUITests;
+			productReference = 4E8775DB1C4948B80081CFDB /* irisPauseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E8775B91C4948B80081CFDB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Lars Nielsen";
+				TargetAttributes = {
+					4E8775C01C4948B80081CFDB = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					4E8775CF1C4948B80081CFDB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4E8775C01C4948B80081CFDB;
+					};
+					4E8775DA1C4948B80081CFDB = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 4E8775C01C4948B80081CFDB;
+					};
+				};
+			};
+			buildConfigurationList = 4E8775BC1C4948B80081CFDB /* Build configuration list for PBXProject "irisPause" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E8775B81C4948B80081CFDB;
+			productRefGroup = 4E8775C21C4948B80081CFDB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E8775C01C4948B80081CFDB /* irisPause */,
+				4E8775CF1C4948B80081CFDB /* irisPauseTests */,
+				4E8775DA1C4948B80081CFDB /* irisPauseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E8775BF1C4948B80081CFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E8775C71C4948B80081CFDB /* Assets.xcassets in Resources */,
+				4E8775CA1C4948B80081CFDB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775CE1C4948B80081CFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775D91C4948B80081CFDB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E8775BD1C4948B80081CFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E8775C51C4948B80081CFDB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775CC1C4948B80081CFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E8775D51C4948B80081CFDB /* irisPauseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4E8775D71C4948B80081CFDB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E8775E01C4948B90081CFDB /* irisPauseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4E8775D21C4948B80081CFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E8775C01C4948B80081CFDB /* irisPause */;
+			targetProxy = 4E8775D11C4948B80081CFDB /* PBXContainerItemProxy */;
+		};
+		4E8775DD1C4948B80081CFDB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E8775C01C4948B80081CFDB /* irisPause */;
+			targetProxy = 4E8775DC1C4948B80081CFDB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E8775C81C4948B80081CFDB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E8775C91C4948B80081CFDB /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E8775E21C4948B90081CFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E8775E31C4948B90081CFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4E8775E51C4948B90081CFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPause/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPause;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4E8775E61C4948B90081CFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPause/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPause;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4E8775E81C4948B90081CFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPauseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPauseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/irisPause.app/Contents/MacOS/irisPause";
+			};
+			name = Debug;
+		};
+		4E8775E91C4948B90081CFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPauseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPauseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/irisPause.app/Contents/MacOS/irisPause";
+			};
+			name = Release;
+		};
+		4E8775EB1C4948B90081CFDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPauseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPauseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = irisPause;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		4E8775EC1C4948B90081CFDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = irisPauseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = nyx.irisPauseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = irisPause;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E8775BC1C4948B80081CFDB /* Build configuration list for PBXProject "irisPause" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E8775E21C4948B90081CFDB /* Debug */,
+				4E8775E31C4948B90081CFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E8775E41C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPause" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E8775E51C4948B90081CFDB /* Debug */,
+				4E8775E61C4948B90081CFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4E8775E71C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E8775E81C4948B90081CFDB /* Debug */,
+				4E8775E91C4948B90081CFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4E8775EA1C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E8775EB1C4948B90081CFDB /* Debug */,
+				4E8775EC1C4948B90081CFDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E8775B91C4948B80081CFDB /* Project object */;
+}
