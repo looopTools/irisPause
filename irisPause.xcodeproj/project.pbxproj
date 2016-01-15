@@ -13,6 +13,10 @@
 		4E8775D51C4948B80081CFDB /* irisPauseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775D41C4948B80081CFDB /* irisPauseTests.swift */; };
 		4E8775E01C4948B90081CFDB /* irisPauseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */; };
 		4E99CCAE1C4989A5001D2D3E /* settings_handling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */; };
+		4EBA3E4B1C499103003C24DF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA3E491C499103003C24DF /* LICENSE */; };
+		4EBA3E4C1C499103003C24DF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA3E4A1C499103003C24DF /* README.md */; };
+		4EBA3E4E1C4993A1003C24DF /* timeout_window.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EBA3E4D1C4993A1003C24DF /* timeout_window.xib */; };
+		4EBA3E501C4996E0003C24DF /* handel_timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EBA3E4F1C4996E0003C24DF /* handel_timer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 		4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = irisPauseUITests.swift; sourceTree = "<group>"; };
 		4E8775E11C4948B90081CFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settings_handling.swift; sourceTree = "<group>"; };
+		4EBA3E491C499103003C24DF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		4EBA3E4A1C499103003C24DF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		4EBA3E4D1C4993A1003C24DF /* timeout_window.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = timeout_window.xib; sourceTree = "<group>"; };
+		4EBA3E4F1C4996E0003C24DF /* handel_timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = handel_timer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,8 @@
 		4E8775B81C4948B80081CFDB = {
 			isa = PBXGroup;
 			children = (
+				4EBA3E491C499103003C24DF /* LICENSE */,
+				4EBA3E4A1C499103003C24DF /* README.md */,
 				4E8775C31C4948B80081CFDB /* irisPause */,
 				4E8775D31C4948B80081CFDB /* irisPauseTests */,
 				4E8775DE1C4948B90081CFDB /* irisPauseUITests */,
@@ -100,6 +110,8 @@
 				4E8775C81C4948B80081CFDB /* MainMenu.xib */,
 				4E8775CB1C4948B80081CFDB /* Info.plist */,
 				4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */,
+				4EBA3E4D1C4993A1003C24DF /* timeout_window.xib */,
+				4EBA3E4F1C4996E0003C24DF /* handel_timer.swift */,
 			);
 			path = irisPause;
 			sourceTree = "<group>";
@@ -226,6 +238,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBA3E4B1C499103003C24DF /* LICENSE in Resources */,
+				4EBA3E4E1C4993A1003C24DF /* timeout_window.xib in Resources */,
 				4E8775C71C4948B80081CFDB /* Assets.xcassets in Resources */,
 				4E8775CA1C4948B80081CFDB /* MainMenu.xib in Resources */,
 			);
@@ -252,6 +266,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EBA3E4C1C499103003C24DF /* README.md in Sources */,
+				4EBA3E501C4996E0003C24DF /* handel_timer.swift in Sources */,
 				4E8775C51C4948B80081CFDB /* AppDelegate.swift in Sources */,
 				4E99CCAE1C4989A5001D2D3E /* settings_handling.swift in Sources */,
 			);

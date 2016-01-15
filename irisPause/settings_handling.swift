@@ -2,14 +2,24 @@
 //  settings_handling.swift
 //  irisPause
 //
-//  Created by Lars Nielsen on 15/01/16.
-//  Copyright © 2016 Lars Nielsen. All rights reserved.
+// Copyright (C) 2015 Lars Nielsen
 //
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//    
+// You should have received a copy of the GNU General Public License
+// along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 import Foundation
 
-class settings_handling: NSObject {
-    
+
     let settings = NSUserDefaults.standardUserDefaults()
     
     func set_timeout_time(time:Double) {
@@ -49,5 +59,14 @@ class settings_handling: NSObject {
         return enable_extend
     }
     
+    // Needs testing to check if it returns a string
+    func set_localised_language(language:String) {
+        settings.setObject(language, forKey: "local_lang")
+    }
     
-}
+    func get_localised_language() -> String {
+        let localised_language = settings.stringForKey("local_lang")
+        return localised_language!
+    }
+    
+    

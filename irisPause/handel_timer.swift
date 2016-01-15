@@ -1,5 +1,5 @@
 //
-//  AppDelegate.swift
+//  handel_timer.swift
 //  irisPause
 //
 // Copyright (C) 2015 Lars Nielsen
@@ -16,34 +16,23 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
+import Foundation
 
-import Cocoa
-
-@NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
-
-    @IBOutlet weak var window: NSWindow!
-    @IBOutlet weak var statusMenu: NSMenu!
+class handel_timer: NSObject {
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    var start: NSTimeInterval;
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
-        let icon = NSImage(named: "statusIcon")
-        icon?.template = true
+    override init() {
+        start = NSDate().timeIntervalSince1970
+    }
+    
+    func start_timer() {
+        var ctime: NSTimeInterval = NSDate().timeIntervalSince1970
         
-        statusItem.image = icon
-        statusItem.menu = statusMenu
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
-        // Insert code here to tear down your application
-    }
-    
-    @IBAction func settingsClicked(sender: NSMenuItem) {
+        while ((ctime - start) / 60) != get_timeout_time() {
+            ctime = NSDate().timeIntervalSince1970
+        }
         
     }
-
-
 
 }
-
