@@ -12,6 +12,7 @@
 		4E8775CA1C4948B80081CFDB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E8775C81C4948B80081CFDB /* MainMenu.xib */; };
 		4E8775D51C4948B80081CFDB /* irisPauseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775D41C4948B80081CFDB /* irisPauseTests.swift */; };
 		4E8775E01C4948B90081CFDB /* irisPauseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */; };
+		4E99CCAE1C4989A5001D2D3E /* settings_handling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		4E8775DB1C4948B80081CFDB /* irisPauseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = irisPauseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E8775DF1C4948B90081CFDB /* irisPauseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = irisPauseUITests.swift; sourceTree = "<group>"; };
 		4E8775E11C4948B90081CFDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = settings_handling.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				4E8775C61C4948B80081CFDB /* Assets.xcassets */,
 				4E8775C81C4948B80081CFDB /* MainMenu.xib */,
 				4E8775CB1C4948B80081CFDB /* Info.plist */,
+				4E99CCAD1C4989A5001D2D3E /* settings_handling.swift */,
 			);
 			path = irisPause;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E8775C51C4948B80081CFDB /* AppDelegate.swift in Sources */,
+				4E99CCAE1C4989A5001D2D3E /* settings_handling.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +475,7 @@
 				4E8775E61C4948B90081CFDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E8775E71C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +484,7 @@
 				4E8775E91C4948B90081CFDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E8775EA1C4948B90081CFDB /* Build configuration list for PBXNativeTarget "irisPauseUITests" */ = {
 			isa = XCConfigurationList;
@@ -487,6 +493,7 @@
 				4E8775EC1C4948B90081CFDB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
