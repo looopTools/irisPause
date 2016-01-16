@@ -32,6 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
+        load_settings()
         // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
         icon?.template = true
@@ -40,6 +41,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Setup preference
         preference = CCNPreferencesWindowController()
+        preference.centerToolbarItems = true
+        preference.setPreferencesViewControllers([settings_view(), about_view()])
         
     }
 
@@ -48,6 +51,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func settingsClicked(sender: NSMenuItem) {
+        preference.showPreferencesWindow()
         
     }
 

@@ -21,6 +21,22 @@ import Foundation
 
 
     let settings = NSUserDefaults.standardUserDefaults()
+
+    // Change time to float instead of double, maybee yes maybee no :/ 
+    var default_timeout: Double = 15.0 // Seconds
+    var default_work_period: Double = 30.0 // minuts
+    var timeout_time: Double = default_timeout
+    var work_period: Double = default_work_period
+
+    func load_settings(){
+        if Array(settings.dictionaryRepresentation().keys).contains("timeout") {
+            timeout_time = get_timeout_time()
+        }
+        
+        if Array(settings.dictionaryRepresentation().keys).contains("work_period") {
+            work_period = get_work_period()
+        }
+    }
     
     func set_timeout_time(time:Double) {
         settings.setDouble(time, forKey: "timeout")
