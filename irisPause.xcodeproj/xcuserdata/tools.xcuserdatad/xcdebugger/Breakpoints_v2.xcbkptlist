@@ -26,11 +26,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "irisPause/settings_handling.swift"
-            timestampString = "474591414.081359"
+            timestampString = "474644028.468982"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29">
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "settings_handling"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "globalinit_33_952AD796BE8C7C0F06C92F28AA3B8858_func0"
+                  moduleName = "irisPause"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tools/Programming/XCODE/irisPause/irisPause/settings_handling.swift"
+                  timestampString = "474644028.474648"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "irisPause.settings.unsafeMutableAddressor : __ObjC.NSUserDefaults"
+                  moduleName = "irisPause"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tools/Programming/XCODE/irisPause/irisPause/settings_handling.swift"
+                  timestampString = "474644028.47491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

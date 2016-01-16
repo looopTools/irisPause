@@ -32,9 +32,13 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
     
     var extend: Bool = false
     
+    var settings_handler = settings_handling.settings_handler
+    
     override func viewDidLoad() {
+        settings_handler.load_settings()
         super.viewDidLoad()
-        break_time_label.stringValue = double_to_string(get_timeout_time())
+        print(settings_handler.get_timeout_time())
+        break_time_label.stringValue = double_to_string(settings_handler.get_timeout_time())
         // Do view setup here.
     }
     
@@ -78,12 +82,13 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         }
         
         if able_to_save {
-            set_timeout_time(tmp_timeout)
-            set_work_period(tmp_work_period)
+            settings_handler.set_timeout_time(tmp_timeout)
+            settings_handler.set_work_period(tmp_work_period)
             // Remeber extended
             
         }
     }
+    
     @IBAction func is_selected(sender: NSButton) {
         if sender == extend_yes {
             extend = true

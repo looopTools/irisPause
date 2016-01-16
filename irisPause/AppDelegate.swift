@@ -23,6 +23,9 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+    var settings_handler = settings_handling.settings_handler
+    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+    
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
     
@@ -32,7 +35,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
-        load_settings()
+        settings_handler.load_settings()
         // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
         icon?.template = true
@@ -43,6 +46,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preference = CCNPreferencesWindowController()
         preference.centerToolbarItems = true
         preference.setPreferencesViewControllers([settings_view(), about_view()])
+
+        print("demo")
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            // do some task
+            let timer = handel_timer()
+
+            timer.work_period_timer()
+//            dispatch_async(dispatch_get_main_queue()) {
+//                // update some UI
+//            }
+        }
+        print("demo2")
         
     }
 
