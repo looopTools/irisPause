@@ -31,6 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var statusMenu: NSMenu!
     
     var preference:CCNPreferencesWindowController!
+    let bw = break_window(windowNibName: "break_window")
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     
@@ -59,7 +60,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 //            let timer:handel_timer = handel_timer()
 //            timer.work_period_timer()
 //        }
-        print("demo2")
+        
+        
+        
         
     }
 
@@ -86,7 +89,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func show_break_window()
     {
-    
+        bw.showWindow(nil)
     }
     
     func someBackgroundTask(timer:NSTimer) {
@@ -102,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func intialise_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_work_period() * 60, target: self, selector: Selector("print_x"), userInfo: nil, repeats: true)
+        return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_work_period(), target: self, selector: Selector("show_break_window"), userInfo: nil, repeats: true)
 
     
     }

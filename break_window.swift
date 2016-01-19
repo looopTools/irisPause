@@ -14,12 +14,12 @@ class break_window: NSWindowController {
     @IBOutlet weak var time_lbl: NSTextField!
     
     override func windowDidLoad() {
+        print("john")
         super.windowDidLoad()
         self.window!.orderFront(self)
         let icon:NSImage = NSImage(named: "pause_icon")!
         break_image.image = icon
-        print("boop")
-        
+       
 
         // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
