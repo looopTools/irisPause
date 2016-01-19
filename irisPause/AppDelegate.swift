@@ -25,6 +25,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     var settings_handler = settings_handling.settings_handler
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+    var workperiod_timer: NSTimer!
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
@@ -35,6 +36,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
 
+        print(settings_handler.get_work_period() * 60)
         settings_handler.load_settings()
         // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
@@ -46,17 +48,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preference = CCNPreferencesWindowController()
         preference.centerToolbarItems = true
         preference.setPreferencesViewControllers([settings_view(), about_view()])
-
-        print("demo")
-        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            // do some task
-            let timer = handel_timer()
-
-            timer.work_period_timer()
-//            dispatch_async(dispatch_get_main_queue()) {
-//                // update some UI
-//            }
-        }
+        
+        workperiod_timer = intialise_timer()
+        
+//        var timer = NSTimer(timeInterval: 1.0, target: self, selector: "someBackgroundTask:", userInfo: nil, repeats: true)
+//
+//
+        
+//        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+//            let timer:handel_timer = handel_timer()
+//            timer.work_period_timer()
+//        }
         print("demo2")
         
     }
@@ -69,6 +71,42 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preference.showPreferencesWindow()
         
     }
+    
+    func background_task(timer: NSTimer) {
+        print("john")
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
+            print("do some background task")
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                print("update some UI")
+                
+            })
+        })
+    }
+    
+    func show_break_window()
+    {
+    
+    }
+    
+    func someBackgroundTask(timer:NSTimer) {
+        print("x")
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
+            print("do some background task")
+            
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                print("update some UI")
+                
+            })
+        })
+    }
+    
+    func intialise_timer() -> NSTimer {
+        return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_work_period() * 60, target: self, selector: Selector("print_x"), userInfo: nil, repeats: true)
+
+    
+    }
+    
 
 
 

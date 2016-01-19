@@ -39,6 +39,7 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         super.viewDidLoad()
         print(settings_handler.get_timeout_time())
         break_time_label.stringValue = double_to_string(settings_handler.get_timeout_time())
+        work_period_label.stringValue = double_to_string(settings_handler.get_work_period())
         // Do view setup here.
     }
     

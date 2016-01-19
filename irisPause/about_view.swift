@@ -8,11 +8,33 @@
 
 import Cocoa
 
-class about_view: NSViewController {
+class about_view: NSViewController, CCNPreferencesWindowControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        
+    }
+    
+    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+        super.init(nibName: "about_view", bundle: nil)
+    }
+    
+    func preferenceIcon() -> NSImage! {
+        return NSImage(named: "about")
+    }
+    
+    func preferenceTitle() -> String! {
+        return "About"
+    }
+    
+    func preferenceIdentifier() -> String! {
+        return "About"
+    }
+
     
 }
