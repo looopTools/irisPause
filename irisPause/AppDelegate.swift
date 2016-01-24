@@ -74,19 +74,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preference.showPreferencesWindow()
         
     }
-    
-    func background_task(timer: NSTimer) {
-        print("john")
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
-            print("do some background task")
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                print("update some UI")
-                
-            })
-        })
-    }
-    
+        
     func show_break_window()
     {
         bw.showWindow(nil)
