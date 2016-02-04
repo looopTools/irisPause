@@ -9,7 +9,7 @@
 import Cocoa
 
 class break_window: NSWindowController {
-
+    
     @IBOutlet weak var break_image: NSImageView!
     @IBOutlet weak var time_lbl: NSTextField!
     
@@ -17,15 +17,11 @@ class break_window: NSWindowController {
     var settings_handler = settings_handling.settings_handler
     
     override func windowDidLoad() {
-        print("john")
         super.windowDidLoad()
         self.window!.orderFront(self)
         self.window!.level = Int(CGWindowLevelForKey(.FloatingWindowLevelKey))
         let icon:NSImage = NSImage(named: "pause_icon")!
         break_image.image = icon
-        timeout_timer = intialise_timeout_timer()
-
-        // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
     }
     
     @IBAction func cancel_break(sender: NSButton) {
@@ -36,13 +32,18 @@ class break_window: NSWindowController {
         // Temp add five minuts to work period
     }
     
+    func show_window() {
+        self.showWindow(nil)
+        timeout_timer = intialise_timeout_timer()
+    }
+    
     func disable_window() {
         if(self.window!.visible) {
-            print("john the second")
+            print("Went into disable window")
             timeout_timer.invalidate()
             timeout_timer = nil
-            self.close()
-            print("john the third")
+            window?.close()
+            print("disable completed")
         } else {
             print("demo")
         }

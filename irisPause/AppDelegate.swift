@@ -39,6 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         print(settings_handler.get_work_period() * 60)
         settings_handler.load_settings()
+        
         // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
         icon?.template = true
@@ -51,19 +52,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         preference.setPreferencesViewControllers([settings_view(), about_view()])
         
         workperiod_timer = intialise_timer()
-        
-//        var timer = NSTimer(timeInterval: 1.0, target: self, selector: "someBackgroundTask:", userInfo: nil, repeats: true)
-//
-//
-        
-//        dispatch_async(dispatch_get_global_queue(priority, 0)) {
-//            let timer:handel_timer = handel_timer()
-//            timer.work_period_timer()
-//        }
-        
-        
-        
-        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -75,31 +63,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
         
-    func show_break_window()
-    {
-        bw.showWindow(nil)
-    }
-    
-    func someBackgroundTask(timer:NSTimer) {
-        print("x")
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), { () -> Void in
-            print("do some background task")
-            
-            dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                print("update some UI")
-                
-            })
-        })
+    func show_break_window() {
+        //bw.showWindow(nil)
+        bw.show_window()
+
     }
     
     func intialise_timer() -> NSTimer {
         return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_work_period(), target: self, selector: Selector("show_break_window"), userInfo: nil, repeats: true)
-
-    
     }
-    
-
-
-
 }
-
