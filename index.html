@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="main_left">
+    IirisPause is a micro break application designed for people with wrist problems, as it forces you to take small micro breaks and by this relax your wrists.
+  </div>
+  <div class="small_right">
+    <h1 class="page-heading">NEWS</h1>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <ul class="post-list">
+      {% for post in site.posts %}
+      <li>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="clear_both" />
+
+
+</div>

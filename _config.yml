@@ -1,0 +1,10 @@
+# Site settings
+title: IrisPause
+email: lnc13 (dot) lars (at) gmail (dot) com
+description:
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+#twitter_username: jekyllrb
+#github_username:  jekyll
+
+# Build settings
+markdown: kramdown
