@@ -50,7 +50,10 @@ class break_window: NSWindowController {
     }
     
     func intialise_timeout_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_timeout_time(), target: self, selector: Selector("disable_window"), userInfo: nil, repeats: true)
+        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_timeout_time()), target: self, selector: Selector("disable_window"), userInfo: nil, repeats: true)
     }
     
+    @IBAction func close_window(sender: NSButton) {
+        disable_window()
+    }
 }

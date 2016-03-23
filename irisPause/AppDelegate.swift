@@ -36,8 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
     
     func applicationDidFinishLaunching(aNotification: NSNotification) {
-
-        print(settings_handler.get_work_period() * 60)
         settings_handler.load_settings()
         
         // Setup status menu icon and menu options
@@ -63,6 +61,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
         
+    @IBAction func close_application(sender: NSMenuItem) {
+        NSApplication.sharedApplication().terminate(self)
+    }
+    
     func show_break_window() {
         //bw.showWindow(nil)
         bw.show_window()
@@ -70,6 +72,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func intialise_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(settings_handler.get_work_period(), target: self, selector: Selector("show_break_window"), userInfo: nil, repeats: true)
+        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_work_period() * 60), target: self, selector: Selector("show_break_window"), userInfo: nil, repeats: true)
     }
 }

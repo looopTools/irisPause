@@ -38,8 +38,8 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         settings_handler.load_settings()
         super.viewDidLoad()
         print(settings_handler.get_timeout_time())
-        break_time_label.stringValue = double_to_string(settings_handler.get_timeout_time())
-        work_period_label.stringValue = double_to_string(settings_handler.get_work_period())
+        break_time_label.stringValue = integer_to_string(settings_handler.get_timeout_time())
+        work_period_label.stringValue = integer_to_string(settings_handler.get_work_period())
         // Do view setup here.
     }
     
@@ -66,20 +66,20 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
     
     @IBAction func save_settings(sender: NSButtonCell) {
         var able_to_save: Bool = true
-        var tmp_timeout: Double = 0.0
-        var tmp_work_period: Double = 0.0
+        var tmp_timeout: Int = 0
+        var tmp_work_period: Int = 0
         
         if !is_string_valid_float(break_time_label.stringValue) {
             // FIRE error
             able_to_save = false
         } else {
-            tmp_timeout = string_to_double(break_time_label.stringValue)
+            tmp_timeout = string_to_integer(break_time_label.stringValue)
         }
         
         if !is_string_valid_float(work_period_label.stringValue) {
             able_to_save = false
         } else {
-            tmp_work_period = string_to_double(work_period_label.stringValue)
+            tmp_work_period = string_to_integer(work_period_label.stringValue)
         }
         
         if able_to_save {

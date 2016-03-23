@@ -34,7 +34,7 @@ class handel_timer: NSObject {
         
         b_window.showWindow(self)
         
-        while ((ctime - stime) / 60) != settings_handler.get_timeout_time() {
+        while ((Int)((ctime - stime) / 60)) != settings_handler.get_timeout_time() {
             ctime = NSDate().timeIntervalSince1970
         }
         
@@ -46,7 +46,7 @@ class handel_timer: NSObject {
         let stime: NSTimeInterval = NSDate().timeIntervalSince1970
         var ctime: NSTimeInterval = NSDate().timeIntervalSince1970
         
-        while ((ctime - stime) / 60) != settings_handler.get_work_period() {
+        while ((Int)(ctime - stime) / 60) != settings_handler.get_work_period() {
             ctime = NSDate().timeIntervalSince1970
             timeout_timer()
         }

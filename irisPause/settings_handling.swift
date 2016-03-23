@@ -21,18 +21,18 @@ import Foundation
 
 class settings_handling: NSObject {
     
-    var default_timeout: Double = 15.0
-    var default_work_period: Double = 30.0
+    var default_timeout: Int = 15
+    var default_work_period: Int = 30
     
-    var timeout_time: Double = 0.0
-    var work_period: Double = 0.0
+    var timeout_time: Int = 0
+    var work_period: Int = 0
     
     var settings = NSUserDefaults.standardUserDefaults()
     
     static let settings_handler = settings_handling()
     
     func load_settings() {
-        if Array(settings.dictionaryRepresentation().keys).contains("timeout") && get_timeout_time() != 0.0 {
+        if Array(settings.dictionaryRepresentation().keys).contains("timeout") && get_timeout_time() != 0 {
             timeout_time = get_timeout_time()
         }else {
             timeout_time = default_timeout
@@ -48,28 +48,28 @@ class settings_handling: NSObject {
 
     }
     
-    func set_timeout_time(time:Double) {
-        settings.setDouble(time, forKey: "timeout")
+    func set_timeout_time(time:Int) {
+        settings.setInteger(time, forKey: "timeout")
     }
     
-    func get_timeout_time() -> Double {
-        let timeout = settings.doubleForKey("timeout")
+    func get_timeout_time() -> Int {
+        let timeout = settings.integerForKey("timeout")
         
-        if timeout >= 0.0 {
+        if timeout >= 0 {
             return timeout
         } else {
             return -1
         }
     }
     
-    func set_work_period(time:Double) {
-        settings.setDouble(time, forKey: "work_period")
+    func set_work_period(time:Int) {
+        settings.setInteger(time, forKey: "work_period")
     }
     
-    func get_work_period() -> Double {
-        let work_period = settings.doubleForKey("work_period")
+    func get_work_period() -> Int {
+        let work_period = settings.integerForKey("work_period")
         
-        if work_period >= 0.0 {
+        if work_period >= 0 {
             return work_period
         } else {
             return -1
