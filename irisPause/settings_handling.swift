@@ -22,7 +22,7 @@ import Foundation
 class settings_handling: NSObject {
     
     var default_timeout: Int = 15
-    var default_work_period: Int = 30
+    var default_work_period: Int = 15
     
     var timeout_time: Int = 0
     var work_period: Int = 0
