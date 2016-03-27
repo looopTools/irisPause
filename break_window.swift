@@ -16,13 +16,17 @@ class break_window: NSWindowController {
     var timeout_timer: NSTimer!
     var settings_handler = settings_handling.settings_handler
     
+    
+    
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window!.orderFront(self)
         self.window!.level = Int(CGWindowLevelForKey(.FloatingWindowLevelKey))
+        self.window!.title = "irisPause"
         let icon:NSImage = NSImage(named: "pause_icon")!
         break_image.image = icon
     }
+    
     
     @IBAction func cancel_break(sender: NSButton) {
         // cancle break

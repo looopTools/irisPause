@@ -30,7 +30,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
     
+//    let cscreens = NSScreen.screens()
+//    var break_windows = [break_window]();
+    
     var preference:CCNPreferencesWindowController!
+    
     let bw = break_window(windowNibName: "break_window")
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
@@ -65,6 +69,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSApplication.sharedApplication().terminate(self)
     }
     
+//    func setup_break_windows() {
+//        for cscreen in cscreens! {
+//            var break_window = break_window(windowNibName: "break_window")
+//            
+//        }
+//    }
+//    
     func show_break_window() {
         //bw.showWindow(nil)
         bw.show_window()
