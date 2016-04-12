@@ -8,6 +8,8 @@
         <customObject id="-2" userLabel="File's Owner" customClass="break_window" customModule="irisPause" customModuleProvider="target">
             <connections>
                 <outlet property="break_image" destination="CWg-by-Pco" id="KUA-tF-iGP"/>
+                <outlet property="counter_label" destination="rS4-hs-Ep9" id="W0Y-Qu-qMB"/>
+                <outlet property="john" destination="d6s-fY-ctY" id="Ebs-Pq-a5w"/>
                 <outlet property="time_lbl" destination="rS4-hs-Ep9" id="oY4-A3-Mkv"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="e5o-ZI-FNO"/>
             </connections>

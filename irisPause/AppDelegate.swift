@@ -21,7 +21,7 @@ import Cocoa
 
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate { 
 
     var settings_handler = settings_handling.settings_handler
     let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
@@ -83,6 +83,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func intialise_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_work_period() * 60), target: self, selector: Selector("show_break_window"), userInfo: nil, repeats: true)
+        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_work_period() * 60), target: self, selector: #selector(AppDelegate.show_break_window), userInfo: nil, repeats: true)
     }
 }
