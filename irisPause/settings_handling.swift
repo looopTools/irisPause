@@ -27,7 +27,7 @@ class settings_handling: NSObject {
     var timeout_time: Int = 0
     var work_period: Int = 0
     
-    var settings = NSUserDefaults.standardUserDefaults()
+    var settings = UserDefaults.standard
     
     static let settings_handler = settings_handling()
     
@@ -48,12 +48,12 @@ class settings_handling: NSObject {
 
     }
     
-    func set_timeout_time(time:Int) {
-        settings.setInteger(time, forKey: "timeout")
+    func set_timeout_time(_ time:Int) {
+        settings.set(time, forKey: "timeout")
     }
     
     func get_timeout_time() -> Int {
-        let timeout = settings.integerForKey("timeout")
+        let timeout = settings.integer(forKey: "timeout")
         
         if timeout >= 0 {
             return timeout
@@ -62,12 +62,12 @@ class settings_handling: NSObject {
         }
     }
     
-    func set_work_period(time:Int) {
-        settings.setInteger(time, forKey: "work_period")
+    func set_work_period(_ time:Int) {
+        settings.set(time, forKey: "work_period")
     }
     
     func get_work_period() -> Int {
-        let work_period = settings.integerForKey("work_period")
+        let work_period = settings.integer(forKey: "work_period")
         
         if work_period >= 0 {
             return work_period
@@ -76,22 +76,22 @@ class settings_handling: NSObject {
         }
     }
     
-    func set_enable_extend_work_period(enable:Bool) {
-        settings.setBool(enable, forKey: "enable_extend")
+    func set_enable_extend_work_period(_ enable:Bool) {
+        settings.set(enable, forKey: "enable_extend")
     }
     
     func get_enable_extend_work_period() -> Bool {
-        let enable_extend = settings.boolForKey("enable_extend")
+        let enable_extend = settings.bool(forKey: "enable_extend")
         return enable_extend
     }
     
     // Needs testing to check if it returns a string
-    func set_localised_language(language:String) {
-        settings.setObject(language, forKey: "local_lang")
+    func set_localised_language(_ language:String) {
+        settings.set(language, forKey: "local_lang")
     }
     
     func get_localised_language() -> String {
-        let localised_language = settings.stringForKey("local_lang")
+        let localised_language = settings.string(forKey: "local_lang")
         return localised_language!
     }
 

@@ -20,22 +20,22 @@ import Foundation
 
 class handel_timer: NSObject {
     
-    var start: NSTimeInterval;
+    var start: TimeInterval;
     var settings_handler = settings_handling.settings_handler
     var b_window = break_window(windowNibName: "break_window")
     
     override init() {
-        start = NSDate().timeIntervalSince1970
+        start = Date().timeIntervalSince1970
     }
     
     func timeout_timer() {
-        let stime: NSTimeInterval = NSDate().timeIntervalSince1970
-        var ctime: NSTimeInterval = NSDate().timeIntervalSince1970
+        let stime: TimeInterval = Date().timeIntervalSince1970
+        var ctime: TimeInterval = Date().timeIntervalSince1970
         
         b_window.showWindow(self)
         
         while ((Int)((ctime - stime) / 60)) != settings_handler.get_timeout_time() {
-            ctime = NSDate().timeIntervalSince1970
+            ctime = Date().timeIntervalSince1970
         }
         
         b_window.close()
@@ -43,11 +43,11 @@ class handel_timer: NSObject {
     }
     
     func work_period_timer() {
-        let stime: NSTimeInterval = NSDate().timeIntervalSince1970
-        var ctime: NSTimeInterval = NSDate().timeIntervalSince1970
+        let stime: TimeInterval = Date().timeIntervalSince1970
+        var ctime: TimeInterval = Date().timeIntervalSince1970
         
         while ((Int)(ctime - stime) / 60) != settings_handler.get_work_period() {
-            ctime = NSDate().timeIntervalSince1970
+            ctime = Date().timeIntervalSince1970
             timeout_timer()
         }
     }

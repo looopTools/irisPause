@@ -20,7 +20,7 @@ class about_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         
     }
     
-    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "about_view", bundle: nil)
     }
     

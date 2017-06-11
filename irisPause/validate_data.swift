@@ -8,7 +8,7 @@
 
 import Foundation
 
-func is_string_valid_float(str:String) -> Bool {
+func is_string_valid_float(_ str:String) -> Bool {
     if NSString(string: str).doubleValue <= 0.0 {
         return false
     }

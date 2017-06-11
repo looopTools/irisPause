@@ -24,8 +24,8 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate { 
 
     var settings_handler = settings_handling.settings_handler
-    let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
-    var workperiod_timer: NSTimer!
+    let priority = DispatchQueue.GlobalQueuePriority.default
+    var workperiod_timer: Timer!
     
     @IBOutlet weak var window: NSWindow!
     @IBOutlet weak var statusMenu: NSMenu!
@@ -37,14 +37,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let bw = break_window(windowNibName: "break_window")
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-1)
+    let statusItem = NSStatusBar.system().statusItem(withLength: -1)
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         settings_handler.load_settings()
         
         // Setup status menu icon and menu options
         let icon = NSImage(named: "statusIcon")
-        icon?.template = true
+        icon?.isTemplate = true
         statusItem.image = icon
         statusItem.menu = statusMenu
         
@@ -56,17 +56,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         workperiod_timer = intialise_timer()
     }
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
     
-    @IBAction func settingsClicked(sender: NSMenuItem) {
+    @IBAction func settingsClicked(_ sender: NSMenuItem) {
         preference.showPreferencesWindow()
         
     }
         
-    @IBAction func close_application(sender: NSMenuItem) {
-        NSApplication.sharedApplication().terminate(self)
+    @IBAction func close_application(_ sender: NSMenuItem) {
+        NSApplication.shared().terminate(self)
     }
     
 //    func setup_break_windows() {
@@ -82,7 +82,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     }
     
-    func intialise_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_work_period() * 60), target: self, selector: #selector(AppDelegate.show_break_window), userInfo: nil, repeats: true)
+    func intialise_timer() -> Timer {
+        return Timer.scheduledTimer(timeInterval: Double(settings_handler.get_work_period() * 60), target: self, selector: #selector(AppDelegate.show_break_window), userInfo: nil, repeats: true)
     }
 }

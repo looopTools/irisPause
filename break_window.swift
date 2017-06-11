@@ -15,27 +15,29 @@ class break_window: NSWindowController {
     @IBOutlet weak var counter_label: NSTextField!
     
     
-    var timeout_timer: NSTimer!
-    var count_down_timer: NSTimer!
+    var timeout_timer: Timer!
+    var count_down_timer: Timer!
     var settings_handler = settings_handling.settings_handler
     
     var counter = 0
     
+    
+    
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window!.orderFront(self)
-        self.window!.level = Int(CGWindowLevelForKey(.FloatingWindowLevelKey))
+        self.window!.level = Int(CGWindowLevelForKey(.floatingWindow))
         self.window!.title = "irisPause"
         let icon:NSImage = NSImage(named: "pause_icon")!
         break_image.image = icon
     }
     
     
-    @IBAction func cancel_break(sender: NSButton) {
+    @IBAction func cancel_break(_ sender: NSButton) {
         // cancle break
     }
     
-    @IBAction func add_five_minuts(sender: NSButton) {
+    @IBAction func add_five_minuts(_ sender: NSButton) {
         // Temp add five minuts to work period
     }
     
@@ -55,7 +57,7 @@ class break_window: NSWindowController {
     }
     
     func disable_window() {
-        if(self.window!.visible) {
+        if(self.window!.isVisible) {
             print("Went into disable window")
             
             // Disable and resetting timers
@@ -71,16 +73,16 @@ class break_window: NSWindowController {
         }
     }
     
-    func intialise_timeout_timer() -> NSTimer {
-        return NSTimer.scheduledTimerWithTimeInterval(Double(settings_handler.get_timeout_time()), target: self, selector: #selector(break_window.disable_window), userInfo: nil, repeats: true)
+    func intialise_timeout_timer() -> Timer {
+        return Timer.scheduledTimer(timeInterval: Double(settings_handler.get_timeout_time()), target: self, selector: #selector(break_window.disable_window), userInfo: nil, repeats: true)
     }
     
-    func initialise_count_down_timer() -> NSTimer {
+    func initialise_count_down_timer() -> Timer {
         print("you got to be kidding")
-            return NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(break_window.update_label), userInfo: nil, repeats: true)
+            return Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(break_window.update_label), userInfo: nil, repeats: true)
     }
     
-    @IBAction func close_window(sender: NSButton) {
+    @IBAction func close_window(_ sender: NSButton) {
         disable_window()
     }
 }

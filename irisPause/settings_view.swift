@@ -48,7 +48,7 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         
     }
     
-    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
+    override init?(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: "settings_view", bundle: nil)
     }
     
@@ -64,7 +64,7 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         return "General"
     }
     
-    @IBAction func save_settings(sender: NSButtonCell) {
+    @IBAction func save_settings(_ sender: NSButtonCell) {
         var able_to_save: Bool = true
         var tmp_timeout: Int = 0
         var tmp_work_period: Int = 0
@@ -90,7 +90,7 @@ class settings_view: NSViewController, CCNPreferencesWindowControllerProtocol {
         }
     }
     
-    @IBAction func is_selected(sender: NSButton) {
+    @IBAction func is_selected(_ sender: NSButton) {
         if sender == extend_yes {
             extend = true
         } else if sender == extend_no {

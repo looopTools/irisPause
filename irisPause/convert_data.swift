@@ -8,18 +8,18 @@
 
 import Foundation
 
-func string_to_double(str: String) -> Double {
+func string_to_double(_ str: String) -> Double {
     return NSString(string: str).doubleValue
 }
 
-func string_to_integer(str: String) -> Int {
+func string_to_integer(_ str: String) -> Int {
     return NSString(string: str).integerValue
 }
 
-func double_to_string(d: Double) -> String {
+func double_to_string(_ d: Double) -> String {
     return String(format: "%f", d)
 }
 
-func integer_to_string(i: Int) -> String {
+func integer_to_string(_ i: Int) -> String {
     return String(format: "%d", i)
 }
